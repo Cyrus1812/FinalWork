@@ -1,16 +1,15 @@
-﻿string[] arrayFirst = { "*-*", "Hello Rustem", "-_-", "2022", "superhero" };
-Random random = new Random();
+﻿string[] arrayFirst = { "*-*", "Hello Rustem", "-_-", "20", "superhero", "-1" };
 Printmassive2(arrayFirst);
 Printmassive2(GetSecondarray(arrayFirst));
 string[] GetSecondarray(string[] array)
 {
-    int LengthArray = random.Next(0, 4);
-    int randomIndex;
-   string[] array2 = {"","","","",""} ;
-    for (int i = 0; i < LengthArray; i++)
+    string[] array2 = { "", "", "", "","","" };
+    for (int i = 0; i < array.Length; i++)
     {
-        randomIndex = random.Next(0, 5);
-        array2[i] = array[randomIndex];
+        if (array[i].Length <= array[0].Length)
+        {
+            array2[i] = array[i];
+        }
     }
     return array2;
 }
@@ -20,6 +19,6 @@ void Printmassive2(string[] array)
     for (int i = 0; i < array.Length; i++)
     {
         Console.Write($"{array[i]} ");
-    }   
-     Console.WriteLine();
+    }
+    Console.WriteLine();
 }
