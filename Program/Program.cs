@@ -3,14 +3,14 @@ Printmassive2(arrayFirst);
 Printmassive2(GetSecondarray(arrayFirst));
 string[] GetSecondarray(string[] array)
 {
-    string[] massivThreee = {"111"};
-    string[] array2 = { "", "", "", "","","" };
-    for (int i = 0; i < array.Length; i++)
+   string[] array2 = { "", "", "", "","","" };
+    int m=3;
+    for (int i = 0; i < array.Count(); i++)
     {
-        if (array[i].Length <= massivThreee[0].Length)
-        {
-            array2[i] = array[i];
-        }
+                if (array[i].Length <= m)
+                {
+                    array2[i] = array[i];
+                }
     }
     return array2;
 }
